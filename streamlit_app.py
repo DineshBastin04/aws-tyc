@@ -66,7 +66,7 @@ def start_transcription_and_analysis():
     # Wait for the transcription job to complete
     with st.spinner('Transcribing...'):
         while True:
-            result = transcribe.get_transcription_job(TranscriptionJobName=job_name)
+            result = transcribe.get_transcription_job(TranscriptionJobName=transcription_job_name )
             if result['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
                 break
             time.sleep(10)  # Wait for 10 seconds before checking again
