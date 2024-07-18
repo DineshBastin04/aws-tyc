@@ -1,1 +1,5 @@
 streamlit
+streamlit_player
+s3fs
+st-files-connection
+boto3
